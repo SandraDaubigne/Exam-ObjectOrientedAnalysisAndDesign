@@ -1,11 +1,14 @@
 package yogaSystem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class YogaStudio {
 
-   private Map<YogaProperties, Object> yogaProperties = new HashMap<YogaProperties, Object>();
+
+
+    private Map<YogaProperties, Object> yogaProperties = new HashMap<YogaProperties, Object>();
 
     public YogaStudio(String name, String address, String webaddress,
                       String thumbnail, String text, int phone) {
@@ -16,9 +19,19 @@ public class YogaStudio {
     yogaProperties.put(YogaProperties.THUMBNAIL, thumbnail);
     yogaProperties.put(YogaProperties.TEXT, text);
     yogaProperties.put(YogaProperties.PHONE, phone);
+
+
     }
 
-    public Object GetYogaProperties(YogaStudio name){
+
+
+
+
+    public void SetYogaProperty(YogaProperties name, Object value){
+        yogaProperties.put(name, value);
+    }
+
+    public Object GetYogaProperties(YogaProperties name){
         return yogaProperties.get(name);
 
     }
