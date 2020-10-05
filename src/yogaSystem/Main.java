@@ -1,8 +1,5 @@
 package yogaSystem;
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -26,6 +23,22 @@ ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
         switch(check){
             case 1:
                 System.out.println("Du är inloggad som Admin");
+                System.out.println("Du är inloggad som Admin vad vill du göra?" +
+                        "\n1. Lägg till Studio" +
+                        "\n2. Ta bort studio" +
+                        "\n3. Redigera studio");
+                int adminChoice = scan.nextInt();
+                switch(adminChoice){
+                    case 1:
+                        System.out.println("Du har valt Lägg till Studio");
+                        break;
+                    case 2:
+                        System.out.println("Du har valt Ta bort studio");
+                        break;
+                    case 3:
+                        System.out.println("Du har valt Redigera Studio");
+                        break;
+                }
                 break;
             case 2:
                 System.out.println("Du är inloggad som Kund vad vill du söka för kurs?" +
