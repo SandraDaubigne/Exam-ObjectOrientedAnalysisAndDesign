@@ -19,16 +19,40 @@ ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
 
         System.out.println("Hej är du admin eller kund? \n1. Logga in som  Admin. \n2. Logga in som Kund");
         Scanner scan = new Scanner(System.in);
+
         int check = scan.nextInt();
+
 
         switch(check){
             case 1:
                 System.out.println("Du är inloggad som Admin");
                 break;
-
             case 2:
-                System.out.println("Du är inloggad som Kund");
-                break;
+                System.out.println("Du är inloggad som Kund vad vill du söka för kurs?" +
+                    "\n1. HathaYoga" +
+                    "\n2. BikramYoga" +
+                    "\n3. Hot Yoga" +
+                    "\n4. Gongbad" +
+                    "\n5. Yin Yoga");
+                int search = scan.nextInt();
+                switch(search){
+                    case 1:
+                        System.out.println("Du har valt HathaYoga");
+                        break;
+                    case 2:
+                        System.out.println("Du har valt BikramYoga");
+                        break;
+                    case 3:
+                        System.out.println("Du har valt Hot Yoga");
+                        break;
+                    case 4:
+                        System.out.println("Du har valt Gongbad");
+                        break;
+                    case 5:
+                        System.out.println("Du har valt Yin Yoga");
+                        break;
+                }
+            break;
         }
 
 
