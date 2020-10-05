@@ -11,16 +11,15 @@ public class YogaStudio {
     private Map<YogaProperties, Object> yogaProperties = new HashMap<YogaProperties, Object>();
 
     public YogaStudio(String name, String address, String webaddress,
-                      String thumbnail, String text, int phone) {
+                      String thumbnail, String text, YogaClass yogaClass, int phone) {
 
     yogaProperties.put(YogaProperties.NAME, name);
     yogaProperties.put(YogaProperties.ADDRESS, address);
     yogaProperties.put(YogaProperties.WEBADDRESS, webaddress);
     yogaProperties.put(YogaProperties.THUMBNAIL, thumbnail);
     yogaProperties.put(YogaProperties.TEXT, text);
+    yogaProperties.put(YogaProperties.YOGACLASS, yogaClass);
     yogaProperties.put(YogaProperties.PHONE, phone);
-
-
     }
 
 
