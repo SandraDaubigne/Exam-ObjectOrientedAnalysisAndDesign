@@ -1,12 +1,13 @@
 package yogaSystem;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-
         ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
+
 
 
         System.out.println("Hej är du admin eller kund? \n1. Logga in som  Admin. \n2. Logga in som Kund");
@@ -23,11 +24,20 @@ public class Main {
                         "\n3. Redigera studio");
                 int adminChoice = scan.nextInt();
                 switch(adminChoice){
-                    case 1:
-                        System.out.println("Du har valt Lägg till Studio");
-                        manageYogaStudio.addYogaStudio("Annas Lycka", "Hemvägen 2", "www.hemma.se",
-                                "Bild", "Hejsan", YogaClass.BIKRAMYOGA, 0730);
-                        break;
+                    case 1:System.out.println("Du har valt Lägg till Studio\n");
+
+                    //Lägg till objekt
+                    manageYogaStudio.addYogaStudio("Annas Lycka", "Hemvägen 2", "www.hemma.se",
+                            "Bild", "Hejsan", YogaClass.BIKRAMYOGA, 0730);
+
+                    manageYogaStudio.addYogaStudio("Sandras Cirkel", "Hemmavid", "www.borta.se",
+                                "Bild", "Hejdå", YogaClass.HOTYOGA, 777);
+
+                    //skriva ut hela listan
+                        System.out.println("Här är alla Studios");
+                    manageYogaStudio.printArray();
+                    break;
+
                 }
                 break;
             case 2:
@@ -57,21 +67,6 @@ public class Main {
                 }
             break;
         }
-
-
-        //Swich(Hela menyn)
-        //1 Admin
-            //Swich (Admin meny)
-            //Lägg till studio
-            //Ta bort studio
-            // Redigera studio
-        //2 User
-            //Swich(User meny)
-            //1. Hatha
-            //2. Bikram
-            //3 .Hotyoga
-            // search(skicka med den variabel från enum som ska sökas upp){}
-        // }
 
     }
 

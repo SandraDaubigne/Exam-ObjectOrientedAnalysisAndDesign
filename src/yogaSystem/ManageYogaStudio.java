@@ -14,4 +14,11 @@ public class ManageYogaStudio {
         studios.add(yogaStudio);
     }
 
+    public void printArray(){
+        for(int i =0; i < studios.size(); i++){
+            System.out.println(studios.get(i));
+            System.out.println("\n");
+        }
+    }
+
 }
