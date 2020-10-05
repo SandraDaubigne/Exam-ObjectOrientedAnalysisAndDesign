@@ -6,19 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
+        ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
 
-        System.out.println("Lägg till Yogastudio: ");
-        manageYogaStudio.addYogaStudio("Annas Lycka", "Hemvägen 2", "www.hemma.se",
-        "Bild", "Hejsan", YogaClass.BIKRAMYOGA, 0730);
-
-        System.out.println(YogaClass.BIKRAMYOGA);
 
         System.out.println("Hej är du admin eller kund? \n1. Logga in som  Admin. \n2. Logga in som Kund");
         Scanner scan = new Scanner(System.in);
 
         int check = scan.nextInt();
-
 
         switch(check){
             case 1:
@@ -31,12 +25,8 @@ ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
                 switch(adminChoice){
                     case 1:
                         System.out.println("Du har valt Lägg till Studio");
-                        break;
-                    case 2:
-                        System.out.println("Du har valt Ta bort studio");
-                        break;
-                    case 3:
-                        System.out.println("Du har valt Redigera Studio");
+                        manageYogaStudio.addYogaStudio("Annas Lycka", "Hemvägen 2", "www.hemma.se",
+                                "Bild", "Hejsan", YogaClass.BIKRAMYOGA, 0730);
                         break;
                 }
                 break;

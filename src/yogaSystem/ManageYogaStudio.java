@@ -14,18 +14,4 @@ public class ManageYogaStudio {
         studios.add(yogaStudio);
     }
 
-    /*
-    public YogaStudio searchYogaClass(Skicka med det värdet in som ska letas efter i objektet){
-
-     //Ta in arraylistan här och loopa igenom den
-
-        return YogaStudio;
-    }
-    */
-
-    public void deleteYogastudio(YogaStudio yogastudio){
-        studios.remove(yogastudio);
-    }
-
-
 }
