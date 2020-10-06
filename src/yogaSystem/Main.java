@@ -1,14 +1,13 @@
 package yogaSystem;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        ManageYogaStudio manageYogaStudio = new ManageYogaStudio();
+       ManageYogaStudio manageYogaStudio = ManageYogaStudio.getInstance();
 
-
+       manageYogaStudio.showMessage();
 
         System.out.println("Hej är du admin eller kund? \n1. Logga in som  Admin. \n2. Logga in som Kund");
         Scanner scan = new Scanner(System.in);
@@ -35,7 +34,7 @@ public class Main {
 
                     //skriva ut hela listan
                         System.out.println("Här är alla Studios");
-                    manageYogaStudio.printArray();
+                    manageYogaStudio.printStudioList();
                     break;
 
                 }
@@ -51,6 +50,7 @@ public class Main {
                 switch(search){
                     case 1:
                         System.out.println("Du har valt HathaYoga");
+                        manageYogaStudio.search(YogaClass.HATHA);
                         break;
                     case 2:
                         System.out.println("Du har valt BikramYoga");
