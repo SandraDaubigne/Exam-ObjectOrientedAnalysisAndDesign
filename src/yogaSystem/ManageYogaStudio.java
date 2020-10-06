@@ -1,7 +1,6 @@
 package yogaSystem;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ManageYogaStudio {
 
@@ -35,26 +34,19 @@ public class ManageYogaStudio {
         System.out.println("Du har nu valt dessa klasser: " + yogaClass);
     }
 
-    public void search(YogaClass yogaClass){
+    public ArrayList<YogaStudio> search(YogaClass yogaClass) {
 
-        System.out.println("Inne i loopen");
+        ArrayList<YogaStudio> result = new ArrayList<>();
 
-       for (int i = 0; i < studios.size(); i++) {
+        for (YogaStudio studio : studios) {
+            YogaClass yogaClassName = (YogaClass) studio.GetYogaProperties(YogaProperties.YOGACLASS);
 
-            if(yogaClass == YogaClass.HATHA){
-                //yogaClass.equals(YogaClass.HATHA)
-                System.out.println("CHECK");
+            if (yogaClassName == yogaClass) {
+                result.add(studio);
             }
-            else{
-                System.out.println("NOT CHECKED");
-            }
-
         }
-        //Loopa igenom arrayen och titta på varje objekt idividuellt tills vi hittar en som matchat typen som anv skickade in
-        // Använd listan med Yogaklass objekten
-        // Sök igenom den efter matchande attribut
-        // Lägg dessa objekt i en ny lista
-        // returnera och skriv ut listan
+
+        return result;
     }
 
 }

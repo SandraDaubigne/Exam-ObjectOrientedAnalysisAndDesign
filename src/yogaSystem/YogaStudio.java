@@ -42,6 +42,7 @@ public class YogaStudio {
                 "\nWebbadress: " + yogaProperties.get(YogaProperties.WEBADDRESS) +
                 "\nBild: " + yogaProperties.get(YogaProperties.THUMBNAIL) +
                 "\nBeskrivning: " + yogaProperties.get(YogaProperties.TEXT) +
+                "\nValda klasser: " + yogaProperties.get(YogaProperties.YOGACLASS) +
                 "\nTelefonnummer: " + yogaProperties.get(YogaProperties.PHONE);
         return yogastudio;
     }
