@@ -1,6 +1,7 @@
 package yogaSystem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ManageYogaStudio {
 
@@ -8,15 +9,9 @@ public class ManageYogaStudio {
 
     private ManageYogaStudio() {
     }
-
     public static ManageYogaStudio getInstance() {
         return instance;
     }
-
-    public void showMessage() {
-        System.out.println("Singleton");
-    }
-
 
     ArrayList<YogaStudio> studios = new ArrayList<>();
 
@@ -27,27 +22,39 @@ public class ManageYogaStudio {
     }
 
     public void printStudioList() {
+
+        System.out.println("Här är alla Studios\n");
+
         for (int i = 0; i < studios.size(); i++) {
             System.out.println(studios.get(i));
             System.out.println("\n");
         }
     }
 
+    public void seeChosenClass(YogaClass yogaClass) {
+        System.out.println("Du har nu valt dessa klasser: " + yogaClass);
+    }
 
-    public void search(ArrayList<YogaStudio> list, YogaClass yogaClass) {
+    public void search(YogaClass yogaClass){
 
-        ArrayList<YogaStudio> searchresult = new ArrayList<>();
+        System.out.println("Inne i loopen");
 
-        for(YogaStudio studio : list){
-            if(){}
+       for (int i = 0; i < studios.size(); i++) {
+
+            if(yogaClass == YogaClass.HATHA){
+                //yogaClass.equals(YogaClass.HATHA)
+                System.out.println("CHECK");
+            }
+            else{
+                System.out.println("NOT CHECKED");
+            }
+
         }
-
-        System.out.println("Du har nu valt dessa klasser: " + yogaClass + "\nDessa är resultaten: \n");
-
-
-
-
-
+        //Loopa igenom arrayen och titta på varje objekt idividuellt tills vi hittar en som matchat typen som anv skickade in
+        // Använd listan med Yogaklass objekten
+        // Sök igenom den efter matchande attribut
+        // Lägg dessa objekt i en ny lista
+        // returnera och skriv ut listan
     }
 
 }

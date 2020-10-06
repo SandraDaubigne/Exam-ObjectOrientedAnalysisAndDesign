@@ -7,7 +7,7 @@ public class Main {
 
        ManageYogaStudio manageYogaStudio = ManageYogaStudio.getInstance();
 
-       manageYogaStudio.showMessage();
+        manageYogaStudio.printStudioList();
 
         System.out.println("Hej är du admin eller kund? \n1. Logga in som  Admin. \n2. Logga in som Kund");
         Scanner scan = new Scanner(System.in);
@@ -25,22 +25,19 @@ public class Main {
                 switch(adminChoice){
                     case 1:System.out.println("Du har valt Lägg till Studio\n");
 
-                    //Lägg till objekt
                     manageYogaStudio.addYogaStudio("Annas Lycka", "Hemvägen 2", "www.hemma.se",
                             "Bild", "Hejsan", YogaClass.BIKRAMYOGA, 0730);
 
                     manageYogaStudio.addYogaStudio("Sandras Cirkel", "Hemmavid", "www.borta.se",
                                 "Bild", "Hejdå", YogaClass.HOTYOGA, 777);
 
-                    //skriva ut hela listan
-                        System.out.println("Här är alla Studios");
                     manageYogaStudio.printStudioList();
                     break;
 
                 }
                 break;
             case 2:
-                System.out.println("Du är inloggad som Kund vad vill du söka för kurs?" +
+                System.out.println("Du är inloggad som Kund vad vill du söka för klass?" +
                     "\n1. HathaYoga" +
                     "\n2. BikramYoga" +
                     "\n3. Hot Yoga" +
@@ -50,6 +47,7 @@ public class Main {
                 switch(search){
                     case 1:
                         System.out.println("Du har valt HathaYoga");
+                        manageYogaStudio.seeChosenClass(YogaClass.HATHA);
                         manageYogaStudio.search(YogaClass.HATHA);
                         break;
                     case 2:
