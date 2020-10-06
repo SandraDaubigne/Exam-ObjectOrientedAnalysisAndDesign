@@ -81,7 +81,7 @@ public class Main {
 
                 case 3:
                     user = false;
-                    System.out.println("Du har nu avslutat systemet");
+                    System.out.println("Du har nu avslutat programmet");
                 break;
 
 
