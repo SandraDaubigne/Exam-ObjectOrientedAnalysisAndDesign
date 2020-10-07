@@ -1,12 +1,9 @@
 package yogaSystem;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class YogaStudio {
-
-
 
     private Map<YogaProperties, Object> yogaProperties = new HashMap<YogaProperties, Object>();
 
@@ -22,17 +19,8 @@ public class YogaStudio {
     yogaProperties.put(YogaProperties.PHONE, phone);
     }
 
-
-
-
-
-    public void SetYogaProperty(YogaProperties name, Object value){
-        yogaProperties.put(name, value);
-    }
-
     public Object GetYogaProperties(YogaProperties name){
         return yogaProperties.get(name);
-
     }
 
     @Override

@@ -22,16 +22,12 @@ public class ManageYogaStudio {
 
     public void printStudioList() {
 
-        System.out.println("Här är alla Studios\n");
+        System.out.println("Här visas alla Studios som finns totalt:\n");
 
         for (int i = 0; i < studios.size(); i++) {
             System.out.println(studios.get(i));
             System.out.println("\n");
         }
-    }
-
-    public void seeChosenClass(YogaClass yogaClass) {
-        System.out.println("Du har nu valt dessa klasser: " + yogaClass);
     }
 
     public ArrayList<YogaStudio> search(YogaClass yogaClass) {
@@ -43,6 +39,7 @@ public class ManageYogaStudio {
 
             if (yogaClassName == yogaClass) {
                 result.add(studio);
+
             }
         }
 

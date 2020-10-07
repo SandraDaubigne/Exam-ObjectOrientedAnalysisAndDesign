@@ -38,6 +38,7 @@ public class Main {
                             manageYogaStudio.addYogaStudio("Nature Spa", "Hemmavidvägen 7", "www.borta.se",
                                     "Bild", "Hejdå", YogaClass.HATHA, 020);
 
+                            manageYogaStudio.printStudioList();
                         break;
                         }
                     break;
