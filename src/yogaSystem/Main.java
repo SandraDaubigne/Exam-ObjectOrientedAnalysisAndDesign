@@ -85,9 +85,7 @@ public class Main {
                     System.out.println("Du har nu avslutat programmet");
                 break;
 
-
             }
-
 
         }
 

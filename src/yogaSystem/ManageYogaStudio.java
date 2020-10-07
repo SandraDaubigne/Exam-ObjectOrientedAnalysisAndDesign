@@ -42,7 +42,6 @@ public class ManageYogaStudio {
 
             }
         }
-
         return result;
     }
 
